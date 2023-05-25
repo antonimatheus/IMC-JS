@@ -1,20 +1,21 @@
-/*
+const form = document.getElementById('form')
 
-Calculadora IMC
+form.addEventListener('submit', function(event) {
+    event.preventDefault()
 
-imc = peso / altura ** 2
-    resultado = imc 
-    
-    */
+    const weight = document.getElementById('weight').value
+    const height = document.getElementById('height').value
 
-let peso = document.getElementById('ipeso')
-let altura = document.getElementById('ialtura')
-let res = document.getElementById('res')
+    const bmi = (weight / (height * height)).toFixed(2)
 
-function analisar() {
-    let p = Number(peso.value)
-    let alt = Number(altura.value)
-    let imc = p / alt ** 2
-    let resultado = imc
-    res.innerHTML = `Seu IMC é de ${resultado}`
-}
+    const value = document.getElementById('value')
+    let description = '';
+
+    document.getElementById('infos').classList.remove('hidden')
+
+    if (bmi < 18.5) {
+        description = 'Cuidado! Você está abaixo do peso!'
+    }
+
+    document.getElementById('description').textContent = description
+}) 

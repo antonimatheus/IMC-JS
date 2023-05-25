@@ -6,25 +6,73 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IMC</title>
     <link rel="stylesheet" href="assets/style/estilo.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
 </head>
 <body>
-    <section id="apresentação">  
-        <h1>Calculadora IMC</h1>
-        <img src="assets/midia/trainer-animate.svg" alt="">
-    </section>
-    <section id="formres">
-        <div id="formulário">
-            <form method="get">
-                <p><label for="ipeso">Peso</label>
-                <input type="number" name="peso" id="ipeso"></p>
-                <p><label for="ialtura">Altura</label>
-                <input type="number" name="altura" id="ialtura"></p>
-                <p><input type="button" value="Analisar" onclick="analisar()"></p>
+    <main id="container">
+        <section id="img">
+            <img src="assets/midia/trainer-animate.svg" alt="image">
+        </section>
+        <section id="calculator">
+            <form id="form">
+                <h1 id="title">
+                    Caculadora - IMC
+                </h1>
+                
+
+                <div class="input-box">
+                    <label for="weight">
+                        Peso em Kg
+                    </label>
+                <div class="input-field">
+                    <i class="fa-solid fa-weight-hanging"></i>
+                    <input type="number" name="weight" id="weight" required>
+                    <span>
+                        Kg
+                    </span>
+                </div>
+                </div>
+                <div class="input-box">
+                    <label for="height">
+                        Altura em metros
+                    </label>
+                    <div class="input-field">
+                    <i class="fa-solid fa-ruler"></i>
+                    <input type="number" name="height" id="height" required>
+                    <span>
+                        m
+                    </span>
+                </div>
+                
+                </div>
+
+                <button id="calculate">
+                    Calcular
+                </button>
+
             </form>
-        </div>
-        <div id="res">
-            Resultado..
-        </div>
-    </section>
+
+            <div id="infos" class="hidden">
+                <div id="result">
+                    <div id="bmi">
+                        <span id="value"></span>
+                        <span>Seu IMC</span>
+                    </div>
+                    <div id="description">
+                        <span></span>
+                    </div>
+                </div>
+                <div id="more_info">
+                    <a href="https://mundoeducacao.uol.com.br/saude-bem-estar/imc.htm" target="_blank">
+                        Mais informações sobre o IMC
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="assets/js/imc.js"></script>
 </body>
 </html>
