@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html, body {
+    width: 100vw;
+    height: 100vh;
+}
+
+img {
+    width: 30vw;
+}
+
+section {
+    display: flex;
+    flex-direction: row;
+    
+}
+
