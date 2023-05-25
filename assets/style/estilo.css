@@ -60,6 +60,14 @@ body {
     border-radius: 3px;
 }
 
+label {
+    transition: .5s;
+}
+
+label:hover {
+    color: #16a34a;
+}
+
 .input-box {
     font-size: 1.1rem;
     color: #cbd5e1;
@@ -81,6 +89,11 @@ body {
     color: #cbd5e1;
     font-size: 1.3rem;
     padding: 0.6rem;
+    transition: .5s;
+}
+
+.input-field i:hover {
+    color: #16a34a;
 }
 
 .input-field input {
@@ -91,8 +104,6 @@ body {
     color: #f8fafc;
     padding: 0.5rem;
 }
-
-
 
 .input-field input::-webkit-outer-spin-button,
 .input-field input::-webkit-inner-spin-button {
@@ -112,10 +123,10 @@ body {
     padding: 0.5rem 0;
     border-radius: 3px;
     cursor: pointer;
+    transition: .5s;
 }
 
 #calculate:hover {
-    transition: .5s;
     background-color: #1ccf5e;
 }
 
